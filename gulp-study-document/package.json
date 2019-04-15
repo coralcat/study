@@ -1,0 +1,30 @@
+{
+  "name": "gulp-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "patch": "node patch.js",
+    "preinstall": "gitbook install",
+    "postinstall": "npm run patch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulder21c/gulp-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "gitbook-plugin-anchors": "^0.7.1",
+    "gitbook-plugin-footnote-string-to-number": "0.0.2",
+    "gitbook-plugin-prism": "^2.4.0",
+    "gitbook-plugin-prism-themes": "0.0.2"
+  }
+}

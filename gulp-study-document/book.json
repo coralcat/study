@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "footnote-string-to-number",
+    "prism",
+    "prism-themes",
+    "anchors",
+    "-highlight"
+  ],
+  "pluginsConfig": {
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-xonokai.css"
+      ]
+    }
+  }
+}
