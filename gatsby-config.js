@@ -20,10 +20,10 @@ module.exports = {
             },
         },
         `gatsby-plugin-netlify-cms`,
+        `gatsby-transformer-remark`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-plugin-offline`,
-        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-emotion`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -32,7 +32,8 @@ module.exports = {
             },
         },
         `gatsby-transformer-remark`,
-        `gatsby-plugin-emotion`,
+        `gatsby-plugin-offline`,
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-typography`,
             options: {
