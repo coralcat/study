@@ -30,7 +30,7 @@ class Blog extends React.Component {
 
 export default Blog
 
-export const pageQuery = graphql`
+export const soriBlogQuery = graphql`
   query {
     site {
       siteMetadata {

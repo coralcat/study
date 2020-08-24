@@ -3,6 +3,7 @@ module.exports = {
     title: `Sori's Blog (Gatsby X Netlify)`,
     description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
     author: `Sori Kim`,
+    siteUrl: `https://coralcat.netlify.com/`,
     social: {
       behance: `coralcat`
     }

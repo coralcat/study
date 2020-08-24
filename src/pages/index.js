@@ -4,9 +4,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-class Blog extends React.Component {
+class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
+    const siteTitle = "Sori's Blog"
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -17,4 +17,4 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default IndexPage
