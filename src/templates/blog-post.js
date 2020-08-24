@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate
 
-export const soriQuery = graphql`
+export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
