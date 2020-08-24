@@ -1,21 +1,24 @@
 import React from "react"
-import {Link, graphql} from "gatsby"
-import {MDXRenderer} from "gatsby-plugin-mdx"
+import { Link, graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Bio from "../components/bio";
+import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {rhythm, scale} from "../utils/typography";
+import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
-    const {previous, next} = this.props.pageContext
+    const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt}/>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -33,7 +36,8 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio/>
+        <Bio />
+
         <ul
           style={{
             display: `flex`,
