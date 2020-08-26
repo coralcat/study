@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: coralcat/coralcat.github.io
+  name: git-gateway
+  branch: master
 
 media_folder: content/assets
 public_folder: ../assets
