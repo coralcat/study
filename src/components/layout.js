@@ -66,7 +66,6 @@ const Layout = ({ location, title, children }) => {
         {header}
       </header>
       <main>{children}</main>
-      <Contact/>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
