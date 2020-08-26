@@ -12,6 +12,7 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-algolia`,
