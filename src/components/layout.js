@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import Search from "./search"
 import Form from "./form";
+import Contact from "../pages/contact";
 const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 
@@ -65,6 +66,7 @@ const Layout = ({ location, title, children }) => {
         {header}
       </header>
       <main>{children}</main>
+      <Contact/>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
