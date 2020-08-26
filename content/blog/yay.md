@@ -4,6 +4,6 @@ date: 2020-08-26T06:26:28.169Z
 title: yay
 description: ay
 ---
-![](../assets/1.jpg)
+![test](../assets/1.jpg "test")
 
 ayayaayay
