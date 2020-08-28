@@ -6,17 +6,21 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import List from "../components/List"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+class BlogIndex extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      <List posts={posts}/>
-    </Layout>
-  )
+    return (
+      <Layout location={data.location} title={siteTitle}>
+        <SEO title="All posts" />
+        <Bio />
+        <List posts={posts}/>
+      </Layout>
+    )
+  }
+
 }
 
 export default BlogIndex
