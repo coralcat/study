@@ -1,6 +1,5 @@
 const path = require(`path`)
 const {createFilePath} = require(`gatsby-source-filesystem`)
-const _ = require("lodash")
 
 exports.createPages = async ({graphql, actions, reporter}) => {
   const {createPage} = actions
@@ -44,24 +43,12 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({
-      path: post.node.fields.slug,
+      path: `/blog${post.node.fields.slug}`,
       component: blogPostTemplate,
       context: {
         slug: post.node.fields.slug,
         previous,
         next
-      },
-    })
-  })
-
-  const tags = result.data.tagsGroup.group
-
-  tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
       },
     })
   })

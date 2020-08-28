@@ -38,12 +38,6 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -67,9 +61,27 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-plugin-categories",
+      options: {
+        templatePath: `${__dirname}/src/templates/category.js`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-tags",
+      options: {
+        templatePath: `${__dirname}/src/templates/tag.js`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     `gatsby-plugin-feed`,

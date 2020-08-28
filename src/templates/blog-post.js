@@ -40,6 +40,31 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
+        {post.fields.category && (
+          <div>
+            <h3>카테고리</h3>
+            <div>
+              <Link to={`/category/${post.fields.category}`}>
+                {post.fields.category}
+              </Link>
+            </div>
+          </div>
+        )}
+        {post.fields.tags && (
+          <div>
+            <h3>태그</h3>
+            <div>
+              {post.fields.tags.map(tag => (
+                <Link
+                  to={`/tags/${tag}`}
+                  className="badge badge-primary p-2 m-1"
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
         <footer>
           <Bio />
         </footer>
@@ -92,6 +117,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+      }
+      fields {
+        category
+        tags
       }
     }
   }
