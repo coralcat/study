@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Main{% endblock %}
+
+{% block content %}
+<div class="title">
+    <h1>즐겨찾기</h1>
+    <div class="buttons">
+        <button class="btn-submit" onclick="location.href='{% url 'create' %}'">링크 추가</button>
+    </div>
+</div>
+<section>
+    <ul class="links">
+        {% for quicklink in object_list %}
+        <li class="link">
+            <a href="{% url 'detail' pk=quicklink.id %}">
+                <h3 class="name">
+                    <span>{{quicklink.name}}</span>
+                </h3>
+                <img src="/media/{{quicklink.image}}" alt="">
+                <p class="description">{{quicklink.description}}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
