@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
+    title: "My Super Cool Blog",
   },
   plugins: [
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
@@ -12,5 +13,6 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    "gatsby-plugin-mdx",
   ],
 };
