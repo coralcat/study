@@ -1,5 +1,14 @@
-/** @format */
+@font-face {
+  font-family: "Lobster";
+  src: url("./Lobster-Regular.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "NanumSquareR";
+  src: url("./NanumSquareR.ttf") format("truetype");
+}
 .hello {
   color: red;
+  background: url("./test.jpg");
+  font-family: "Lobster", "NanumSquareR";
 }
