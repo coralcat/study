@@ -2,11 +2,11 @@
 import _ from "lodash";
 import printMe from "./print.js";
 import "./style.css";
-import Data from "./data.xml";
-import Notes from "./data.csv";
-import toml from "./data.toml";
-import yaml from "./data.yaml";
-import json from "./data.json5";
+import Data from "./data/data.xml";
+import Notes from "./data/data.csv";
+import toml from "./data/data.toml";
+import yaml from "./data/data.yaml";
+import json from "./data/data.json5";
 
 // console.log(toml.title); // output `TOML Example`
 // console.log(toml.owner.name); // output `Tom Preston-Werner`

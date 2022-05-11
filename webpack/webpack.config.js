@@ -7,22 +7,32 @@ const json5 = require("json5");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   entry: {
     index: "./src/index.js",
-    print: "./src/print.js",
+    another: "./src/another-module.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management"
+      title: "Development"
     })
   ],
+  devtool: "inline-source-map",
+  devServer: {
+    static: "./dist"
+  },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[hash]",
-    clean: true
+    clean: true,
+    publicPath: "/"
   },
-
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   module: {
     rules: [
       {
