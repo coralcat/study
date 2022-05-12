@@ -14,24 +14,31 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Development"
-    })
+      title: "Caching",
+    }),
   ],
   devtool: "inline-source-map",
   devServer: {
-    static: "./dist"
+    static: "./dist",
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[hash]",
     clean: true,
-    publicPath: "/"
+    publicPath: "/",
   },
   optimization: {
+    runtimeChunk: "single",
     splitChunks: {
-      chunks: "all"
-    }
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
   },
   module: {
     rules: [
